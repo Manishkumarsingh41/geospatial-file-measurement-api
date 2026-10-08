@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+    environment:
+      UPLOAD_DIR: uploads
+      MAX_UPLOAD_SIZE_MB: 50
